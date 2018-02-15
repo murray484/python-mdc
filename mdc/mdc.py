@@ -45,3 +45,17 @@ class Mdc():
         if source_id not in available_sources:
             raise exceptions.SourceNotExist()
         self.send_command(0x14, source_id)
+
+    def set_volume(self, volume):
+        """Set the volume of the remote TV."""
+        if 0 < volume > 100:
+            raise exceptions.InvalidVolume()
+        self.send_command(0x12, volume)
+
+    def mute_on(self):
+        """Mute the remote TV."""
+        self.send_command(0x13, 0x1)
+
+    def mute_off(self):
+        """Unmute the remote TV."""
+        self.send_command(0x13, 0x0)
