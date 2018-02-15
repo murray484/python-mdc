@@ -38,7 +38,22 @@ class Mdc():
         self.send_command(0x11, 0x1)
 
     def set_source(self, source_id):
-        """Set the source of the remote TV."""
+        """Set the source of the remote TV.
+
+        The source_id value could be one of the following value :
+        - 0x14: PC
+        - 0x1E: BNC
+        - 0x18: DVI
+        - 0x0C: AV
+        - 0x04: S-Video
+        - 0x08: Component
+        - 0x20: MagicNet
+        - 0x30: RF(TV)
+        - 0x40: DTV
+        - 0x21: HDMI 1
+        - 0x23: HDMI 2
+        - 0x25: DisplayPort in
+        """
         available_sources = [
             0x14, 0x1E, 0x18, 0x0C, 0x04, 0x08,
             0x20, 0x30, 0x40, 0x21, 0x23, 0x25
