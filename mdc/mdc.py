@@ -18,3 +18,9 @@ class Mdc():
         checksum = sum(command[1:]) % 256
         command.append(checksum)
         self._socket.send(bytes(command))
+
+    def power_off(self):
+        self.send_command(0x11, 0x0)
+
+    def power_on(self):
+        self.send_command(0x11, 0x1)
