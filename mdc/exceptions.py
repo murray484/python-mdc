@@ -3,4 +3,5 @@
 
 class SourceNotExist(Exception):
     """Source do not exist."""
+
     pass

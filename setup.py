@@ -4,12 +4,15 @@ import setuptools
 setuptools.setup(
     name="mdc",
     version="0.1.0",
-    description="",
+    description="Implementation of the Multiple Display Control Protocol.",
     url="https://git.vpgrp.io/noc/python-mdc",
     author="Damien PLENARD",
     author_email="dplenard@vente-privee.com",
     license="Apache License 2.0",
-    long_description=open("README.md").read(),
+    long_description="""Implementation of the Samsung Multiple Display Control
+    Protocol through Ethernet/Wireless. Right now, this implementation is
+    tested only on Samsung DM-E Series and specifically on the Samsung
+    LH55DMEPLGC/EN.""",
     entry_points={
         "console_scripts": ["mdc=mdc.__main__:main"]
     },

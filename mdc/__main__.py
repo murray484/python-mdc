@@ -2,6 +2,7 @@
 
 
 def main():
+    """Handle argument and run MDC command."""
     pass
 
 
