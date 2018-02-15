@@ -16,12 +16,11 @@ setuptools.setup(
     packages=["mdc"],
     install_requires=[],
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
         "Intended Audience :: System Administrators",
         "Environment :: Console",
         "License :: OSI Approved :: Apache Software License",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Topic :: Home Automation",
