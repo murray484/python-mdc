@@ -64,7 +64,7 @@ class Mdc():
 
     def set_volume(self, volume):
         """Set the volume of the remote TV."""
-        if 0 < volume > 100:
+        if volume < 0 or volume > 100:
             raise exceptions.InvalidVolume()
         self.send_command(0x12, volume)
 
