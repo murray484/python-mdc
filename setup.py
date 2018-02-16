@@ -17,6 +17,7 @@ setuptools.setup(
         "console_scripts": ["mdc=mdc.__main__:main"]
     },
     packages=["mdc"],
+    test_suite="tests",
     install_requires=[],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
