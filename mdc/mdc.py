@@ -89,7 +89,7 @@ class Mdc():
 
         The protocol do not support more than 25 TV.
         """
-        if 0 > nb_col > 5 or 1 > nb_col > 5 or 1 > pos > 25:
+        if 0 > nb_row > 5 or 1 > nb_col > 5 or 1 > pos > 25:
             raise exceptions.VideoWallNotSupported()
         wall_div = nb_row << 4 | nb_col
         if nb_row == 0:
