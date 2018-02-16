@@ -1,4 +1,4 @@
-# python-mdc [![License][license-img]][license-href] [![pipeline status][pipeline-img]][pipeline-href]
+# python-mdc [![License][license-img]][license-href] [![pipeline status][pipeline-img]][pipeline-href] [![coverage report][coverage-img]][pipeline-href]
 
 1. [Description](#description)
 2. [Limitations](#limitations)
@@ -31,5 +31,6 @@ Right now, this implementation is tested only on Samsung
 [license-href]: /LICENSE
 [pipeline-img]: https://git.vpgrp.io/noc/python-mdc/badges/master/pipeline.svg
 [pipeline-href]: https://git.vpgrp.io/noc/python-mdc/commits/master
+[coverage-img]: https://git.vpgrp.io/noc/python-mdc/badges/master/coverage.svg
 [dme-href]: https://www.samsung.com/us/business/products/displays/standalone/dm-series/
 [model-href]: http://www.samsung.com/nl/business/smart-signage/professional-display-dme-series/lh55dmeplgcen/
