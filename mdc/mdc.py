@@ -90,7 +90,11 @@ class Mdc():
         The protocol do not support more than 25 TV (5 x 5).
         If nb_row is set to 0, video wall will be disabled.
         """
-        if 0 > nb_row > 5 or 1 > nb_col > 5 or 1 > pos > 25:
+        if nb_row < 0 or nb_row > 5:
+            raise exceptions.VideoWallNotSupported()
+        if nb_col < 1 or nb_col > 5:
+            raise exceptions.VideoWallNotSupported()
+        if pos < 1 or pos > 25:
             raise exceptions.VideoWallNotSupported()
         wall_div = nb_row << 4 | nb_col
         if nb_row == 0:
