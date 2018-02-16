@@ -87,7 +87,8 @@ class Mdc():
     def set_video_wall(self, nb_row, nb_col, pos):
         """Configure the video wall position for the current source.
 
-        The protocol do not support more than 25 TV.
+        The protocol do not support more than 25 TV (5 x 5).
+        If nb_row is set to 0, video wall will be disabled.
         """
         if 0 > nb_row > 5 or 1 > nb_col > 5 or 1 > pos > 25:
             raise exceptions.VideoWallNotSupported()
