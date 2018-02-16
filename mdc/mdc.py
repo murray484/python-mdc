@@ -75,3 +75,23 @@ class Mdc():
     def mute_off(self):
         """Unmute the remote TV."""
         self.send_command(0x13, 0x0)
+
+    def video_wall_on(self):
+        """Enable video wall for the current source."""
+        self.send_command(0x84, 0x1)
+
+    def video_wall_off(self):
+        """Disable video wall for the current source."""
+        self.send_command(0x84, 0x0)
+
+    def set_video_wall(self, nb_row, nb_col, pos):
+        """Configure the video wall position for the current source.
+
+        The protocol do not support more than 25 TV.
+        """
+        if 0 > nb_col > 5 or 1 > nb_col > 5 or 1 > pos > 25:
+            raise exceptions.VideoWallNotSupported()
+        wall_div = nb_row << 4 | nb_col
+        if nb_row == 0:
+            wall_div = 0x00
+        self.send_command(0x89, wall_div, pos)

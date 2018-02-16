@@ -11,3 +11,9 @@ class InvalidVolume(Exception):
     """Invalid volume value."""
 
     pass
+
+
+class VideoWallNotSupported(Exception):
+    """Video Wall not supported."""
+
+    pass
