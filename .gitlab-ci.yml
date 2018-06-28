@@ -1,37 +1,37 @@
 ---
-  stages:
-    - commit
-    - linter
-    - test
+stages:
+  - commit
+  - linter
+  - test
 
-  git-history:
-    stage: commit
-    script:
-      - >
-        bash <(curl -s
-        https://gitlab.com/yue-script/checks/raw/master/check_git_history.sh)
+git-history:
+  stage: commit
+  script:
+    - >
+      bash <(curl --fail --location --silent --show-error
+      https://git.io/vxIxF)
 
-  lines-length:
-    stage: commit
-    script:
-      - >
-        bash <(curl -s
-        https://gitlab.com/yue-script/checks/raw/master/check_lines_length.sh)
-        80 README.md
+lines-length:
+  stage: commit
+  script:
+    - >
+      bash <(curl --fail --location --silent --show-error
+      https://git.io/vxIxN)
+      80 README.md
 
-  pylama:
-    stage: linter
-    image: vpgrp/linter:python
-    script:
-      - pylama mdc
+pylama:
+  stage: linter
+  image: vpgrp/linter:python
+  script:
+    - pylama mdc
 
-  unittest:
-    stage: test
-    image: vpgrp/python:3.5
-    before_script:
-      - python3 -m pip install coverage
-    script:
-      - coverage run --source=mdc setup.py test
-      - coverage report
-    coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
-  # EOF
+unittest:
+  stage: test
+  image: vpgrp/python:3.5
+  before_script:
+    - python3 -m pip install coverage
+  script:
+    - coverage run --source=mdc setup.py test
+    - coverage report
+  coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
+# EOF
