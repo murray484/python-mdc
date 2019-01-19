@@ -2,7 +2,7 @@ import setuptools
 
 
 setuptools.setup(
-    name="mdc",
+    name="samsung-mdc",
     version="0.1.0",
     description="Implementation of the Multiple Display Control Protocol.",
     url="https://git.vpgrp.io/noc/python-mdc",

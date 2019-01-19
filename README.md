@@ -8,6 +8,11 @@
 
 This is a fork of vente-privee's python-mdc.  It is customized for use with HomeAssistant. 
 
+You can install the library from PyPi using pip:
+```
+pip install samsung-mdc
+```
+
 Implementation of the Samsung Multiple Display Control Protocol through
 Ethernet/Wireless.
 
